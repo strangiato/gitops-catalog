@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Install Kustomize
         run: |
+          which kustomize
+          kustomize version
           echo "Downloading Kustomize from URL: ${KUSTOMIZE_URL}"
           sudo curl "${KUSTOMIZE_URL}" -L -o ${BIN_PATH}/kustomize
           sudo chmod +x ${BIN_PATH}/kustomize

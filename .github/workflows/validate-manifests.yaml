@@ -20,6 +20,8 @@ jobs:
           echo "Downloading Kustomize from URL: ${KUSTOMIZE_URL}"
           sudo curl "${KUSTOMIZE_URL}" -L -o ${BIN_PATH}/kustomize
           sudo chmod +x ${BIN_PATH}/kustomize
+          which kustomize
+          kustomize version
       - name: Code Checkout
         uses: actions/checkout@v3
       - name: Validate Manifests
